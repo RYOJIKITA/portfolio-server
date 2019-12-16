@@ -1,0 +1,63 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - app/channels/**/*
+
+require: rubocop-rails
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*.rb
+    - test/**/*
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - test/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - config/routes.rb
+    - test/**/*
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*
+
+Layout/IndentFirstArrayElement:
+  EnforcedStyle: consistent
+
+Layout/IndentFirstHashElement:
+  EnforcedStyle: consistent
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: space
+
+Layout/EndOfLine:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
